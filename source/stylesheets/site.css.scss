@@ -1,24 +1,85 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap');
+
+* {
+  font-family: 'Source Sans Pro';
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+html {
+  background: #f2f0e6;
+  color: #36454f;
+  padding: 10px;
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+.recipes {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-auto-rows: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  grid-gap: 10px;
+  list-style: none;
+}
+
+.recipe {
+  break-inside: avoid;
+  color: #fdfdfc;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+}
+
+.recipe--landscape {
+  grid-column: auto / span 7;
+  grid-row: auto / span 5;
+}
+
+.recipe--portrait {
+  grid-column: auto / span 5;
+  grid-row: auto / span 7;
+}
+
+.recipe--square {
+  grid-column: auto / span 6;
+  grid-row: auto / span 6;
+}
+
+.recipe h2 {
+  background: rgba(54, 69, 79, 0.8);
+  font-family: 'Fjalla One';
+  font-size: 24px;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  padding: 8px;
+}
+
+.recipe img {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+.recipe dl {
+  background: rgba(54, 69, 79, 0.8);
+  grid-column: 1;
+  grid-row: 3;
+  padding: 3px;
+  justify-self: start;
+}
+
+.recipe dt {
+  display: none;
+}
+
+.recipe a {
+  color: inherit;
+}
+
+.recipe a:hover {
+  text-decoration-style: dotted;
 }
