@@ -1,0 +1,50 @@
+- name: Sausage & lentil bake
+  photo:
+    file: sausage-and-lentil-bake.jpg
+    aspect: square
+  source: Olive Magazine
+- name: Linguine al tonno
+  photo:
+    file: linguine-al-tonno.jpg
+    aspect: landscape
+  source: Gino’s Pasta, 2010
+- name: Butternut squash pasta bake
+  photo:
+    file: butternut-squash-pasta-bake.jpg
+    aspect: landscape
+  source:
+    label: Tom Kerridge
+    url: https://www.goodtoknow.co.uk/recipes/tom-kerridges-creamy-butternut-squash-pasta-bake
+- name: Cheese on toast
+  photo:
+    file: cheese-on-toast.jpg
+    aspect: landscape
+- name: Chicken & chorizo jambalaya
+  photo:
+    file: chicken-and-chorizo-jambalaya.jpg
+    aspect: landscape
+  source:
+    label: HelloFresh
+    url: https://www.hellofresh.co.uk/recipes/your-favourite-orange-and-honey-chicken-jambalaya-566192524dab7175578b4567
+- name: Cheesy leek spaghetti
+  photo:
+    file: cheesy-leek-spaghetti.jpg
+    aspect: portrait
+  source:
+    label: Slimming Eats
+    url: http://www.slimmingeats.com/blog/one-pot-creamy-cheesy-leek-pasta
+- name: Roast chicken & potatoes
+  photo:
+    file: roast-chicken-and-potatoes.jpg
+    aspect: portrait
+- name: Bean chilli
+  photo:
+    file: bean-chilli.jpg
+    aspect: square
+- name: Sausage fusilli
+  photo:
+    file: sausage-fusilli.jpg
+    aspect: landscape
+  source:
+    label: Jamie Oliver
+    url: https://www.jamieoliver.com/recipes/pasta-recipes/spicy-sausage-fusilli/

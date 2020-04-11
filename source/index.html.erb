@@ -3,64 +3,22 @@ title: Recipebox
 ---
 
 <ul class="recipes">
-  <li class="recipe recipe--square">
-    <h2>Sausage & lentil bake</h2>
-    <img src="/images/sausage-and-lentil-bake.jpg">
-    <dl>
-      <dt>Source</dt>
-      <dd>Olive Magazine</dd>
-    </dl>
-  </li>
-  <li class="recipe recipe--landscape">
-    <h2>Linguine al tonno</h2>
-    <img src="/images/linguine-al-tonno.jpg">
-    <dl>
-      <dt>Source</dt>
-      <dd>Gino’s Pasta, 2010</dd>
-    </dl>
-  </li>
-  <li class="recipe recipe--landscape">
-    <h2>Butternut squash pasta bake</h2>
-    <img src="/images/butternut-squash-pasta-bake.jpg">
-    <dl>
-      <dt>Source</dt>
-      <dd><a href="https://www.goodtoknow.co.uk/recipes/tom-kerridges-creamy-butternut-squash-pasta-bake">Tom Kerridge</a></dd>
-    </dl>
-  </li>
-  <li class="recipe recipe--landscape">
-    <h2>Chicken & chorizo jambalaya</h2>
-    <img src="/images/chicken-and-chorizo-jambalaya.jpg">
-    <dl>
-      <dt>Source</dt>
-      <dd><a href="https://www.hellofresh.co.uk/recipes/your-favourite-orange-and-honey-chicken-jambalaya-566192524dab7175578b4567">HelloFresh</a></dd>
-    </dl>
-  </li>
-  <li class="recipe recipe--portrait">
-    <h2>Cheesy leek spaghetti</h2>
-    <img src="/images/cheesy-leek-spaghetti.jpg">
-    <dl>
-      <dt>Source</dt>
-      <dd><a href="http://www.slimmingeats.com/blog/one-pot-creamy-cheesy-leek-pasta">Slimming Eats</a></dd>
-    </dl>
-  </li>
-  <li class="recipe recipe--portrait">
-    <h2>Roast chicken & potatoes</h2>
-    <img src="/images/roast-chicken-and-potatoes.jpg">
-  </li>
-  <li class="recipe recipe--square">
-    <h2>Bean chilli</h2>
-    <img src="/images/bean-chilli.jpg">
-  </li>
-  <li class="recipe recipe--landscape">
-    <h2>Cheese on toast</h2>
-    <img src="/images/cheese-on-toast.jpg">
-  </li>
-  <li class="recipe recipe--landscape">
-    <h2>Sausage fusilli</h2>
-    <img src="/images/sausage-fusilli.jpg">
-    <dl>
-      <dt>Source</dt>
-      <dd><a href="https://www.jamieoliver.com/recipes/pasta-recipes/spicy-sausage-fusilli/">Jamie Oliver</a></dd>
-    </dl>
-  </li>
+  <% data.recipes.each do |recipe| %>
+    <li class="recipe recipe--<%= recipe.photo.aspect %>">
+      <h2><%= recipe.name %></h2>
+      <img src="/images/<%= recipe.photo.file %>">
+      <% if recipe.respond_to?(:source) %>
+        <dl>
+          <dt>Source</dt>
+          <dd>
+            <% if recipe.source.respond_to?(:url) %>
+              <%= link_to(recipe.source.label, recipe.source.url) %>
+            <% else %>
+              <%= recipe.source %>
+            <% end %>
+          </dd>
+        </dl>
+      <% end %>
+    </li>
+  <% end %>
 </ul>
