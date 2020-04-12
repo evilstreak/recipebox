@@ -48,3 +48,10 @@
   source:
     label: Jamie Oliver
     url: https://www.jamieoliver.com/recipes/pasta-recipes/spicy-sausage-fusilli/
+- name: Golden chicken with potato gratin
+  photo:
+    file: golden-chicken-with-potato-gratin.jpg
+    aspect: portrait
+  source:
+    label: Jamie Oliver
+    url: https://www.jamieoliver.com/recipes/chicken-recipes/golden-chicken-braised-greens-potato-gratin/
